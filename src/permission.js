@@ -1,6 +1,7 @@
 import router from './router'
 import NProgress from 'nprogress'
-import 'nprogress/nprogress.css'
+import 'nprogress/nprogress.css' 
+// import {Store} from 'vuex'
 
 //路由白名单
 const whiteList = [
@@ -13,7 +14,11 @@ router.beforeEach((to, from, next) => {
 	if (whiteList.indexOf(to.path) !== -1) {
 		next()
 	} else {
-		next()
+		if(sessionStorage.getItem('usename')){
+			next()
+		}else{
+			next({path:'/login'})
+		}
 	}
 })
 

@@ -1,7 +1,6 @@
 <template>
     <div class="notFound">
         <p>404</p>
-        <router-link to="/">home</router-link>
     </div>
 
 </template>

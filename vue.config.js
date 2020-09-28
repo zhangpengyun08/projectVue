@@ -14,6 +14,7 @@ const SentryCliPlugin = require('@sentry/webpack-plugin');
 const resolve = dir => path.join(__dirname, dir);
 
 module.exports = {
+	runtimeCompiler: true,
 	outputDir: 'dist',
 	assetsDir: 'public',
 	lintOnSave: false,

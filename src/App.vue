@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <transition name="fade" mode="out-in">
-            <router-view :key="$route.path"/>
+            <router-view/>
         </transition>
     </div>
 </template>
@@ -13,20 +13,13 @@
 </script>
 
 <style lang="scss">
-    .fade-enter {
-        opacity: 0;
+    body,html{
+        margin: 0;
+        padding: 0;
     }
-
-    .fade-leave {
-        opacity: 1;
-    }
-
-    .fade-enter-active {
-        transition: opacity .1s;
-    }
-
-    .fade-leave-active {
-        opacity: 0;
-        transition: opacity .15s;
+    #app{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
     }
 </style>
